@@ -33,22 +33,22 @@ Here are your learning objectives for this self-assessment.
 Slim Jenkins has the existing code on Github, so you need to download it from there. Actually, developers call this process _cloning a repository_.
 
 1. In your terminal, to go your workspace directory.
-    ```sh
-    cd ~/workspace
-    ```
+   ```sh
+   cd ~/workspace
+   ```
 2. Click on the repository link that you got in your Slack message from the Learning Platform.
 3. On that page you will see a green **Code** button. Click on that.
 4. A small popup will appear. Click on the **SSH** text.
 5. Then click on the copy icon you see all the way to the right of the text.
 6. Back in your terminal, you will run the following command, replacing the `{your URL here}` with what you copied.
-    ```sh
-    git clone {your URL here}
-    ```
+   ```sh
+   git clone {your URL here}
+   ```
 7. This will create a new sub-directory called `bug-wrangler-ranch`. Use the `cd` command to navigate into that directory and open it in VS Code.
-    ```sh
-    cd bug-wrangler-ranch
-    code .
-    ```
+   ```sh
+   cd bug-wrangler-ranch
+   code .
+   ```
 
 Open the `main.js` and create your `launch.json` so that you can debug the code starting with `main.js`. Then run the program and start the investigation.
 
@@ -104,24 +104,36 @@ Your journey will take you through the wildness of the American Midwest and acro
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. In the **main** module, one of the first lines of code is `const drovers = hireDrovers(cattleToDrive)`. Explain what the value of the `drovers` variable is when that line of code runs.
-   > Your answer here
+
+   > This is a function that the takes the lines form the array in database.js and then sorts and pushes them into drovers to hold and use. However in the function it stops at 5.
+
 2. At the bottom of the main module, you will see the following code - `for (const drover of drovers)`. Explain what the values of both the `drover` and the `drovers` variables are.
-   > Your answer here
+
+   > Drovers is an object that holds 5 of the random array lines. drover is the created in the for statement to take the value of single line and the console.log it in the net line.
+
 3. In the **journey** module, there is a `journeyMaker()` function. In that function, there is a variable named `areas` which will have the value of an object. Use your debugger to show what the value of each key is on that object. Use [Loom](https://www.loom.com) to record your session.
-   > Your public Loom URL here
+
+   > https://www.loom.com/share/3d3d3819b93745479238d23d6950e76d?sid=83a9c50d-4a16-43ae-b7e2-d4f3566055f2
+
 4. Also in the **journey** module, there is the following code:
+
    ```js
    for (let forestNumber = 0; forestNumber < areas.forests; forestNumber++) {
-      journey.push("forest")
+     journey.push("forest");
    }
    ```
-   Explain this code with your best vocabulary.
-   > Your answer here
-5. Explain the value of the `database` variable in the **database** module. Be as comprehensive as possible.
-   > Your answer here
-6. In the **drovers** module, there is a `hireDrovers()` function. You will notice the following code on that line - `(herdSize)`. What is that defining, and where does it get its value?
-   > Your answer here
 
+   Explain this code with your best vocabulary.
+
+   > as we are using the journey function we have other functions at play such as createForest which assigns forests with a numeric value. this for statement then introduces forestnumber and sets its value at 0. as long as areas using the forests parameters are numerically greater than area.forest then the string "forest" gets pushed into journey. forest number then gets bigger using the ++ syntax and the for line is run again until the value of forestNumber is greater that the area.forests.
+
+5. Explain the value of the `database` variable in the **database** module. Be as comprehensive as possible.
+
+   > There are two arrays in the database object. The first Array is cattleTypes which only has two parameters, ID and Breed. the second array has the drovers array which has 4 parameter, first and last name, ID and gender.
+
+6. In the **drovers** module, there is a `hireDrovers()` function. You will notice the following code on that line - `(herdSize)`. What is that defining, and where does it get its value?
+
+   > I wasn't sure why it was there in the first place. The purpose of the function was to pick 5 drovers at random. I also changed the value of numberNeeded to just a flat five. I actually don't remember what was there initially but changing it made it easier to read.
 
 ## Final Step
 
